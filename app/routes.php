@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+use App\API\AuthCodeGrantOAuthServerAPI;
+use App\API\AuthServerAPI;
 use App\API\OAuthServerAPI;
 use App\API\PasswordGrantOAuthServerAPI;
 use Psr\Http\Message\ResponseInterface as Response;
@@ -14,10 +16,7 @@ return function (SlimApp $app) {
         return $response;
     });
 
-    // Password grant
-    // $oauthServer = new OAuthServerAPI("/oauth");
-    // $oauthServer->addRequests($app);
-
-    $oauthServer = new PasswordGrantOAuthServerAPI("/oauth");
+    $oauthServer = new AuthServerAPI("/oauth");
     $oauthServer->addRequests($app);
+
 };

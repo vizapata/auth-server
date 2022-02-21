@@ -28,7 +28,6 @@ class UserRepository extends EntityRepository implements UserRepositoryInterface
         $grantType,
         ClientEntityInterface $clientEntity
     ) {
-        error_log("Responnd to credentials $username, $password, $grantType", 0);
         $user = new UserEntity();
         $user->setActive(true);
         $user->setId(1);
