@@ -9,7 +9,48 @@
     ],
     "homepage": "http://github.com/vizapata/auth-server",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Zapata",
+            "email": "victorzapatabedoya@hotmail.com",
+            "homepage": "https://github.com/vizapata"
+        }
+    ],
     "require": {
-        "league/oauth2-server": "^8.3"
+        "php": "^7.4 || ^8.0",
+        "ext-json": "*",
+        "monolog/monolog": "^2.3",
+        "php-di/php-di": "^6.3",
+        "slim/psr7": "^1.5",
+        "slim/slim": "^4.9"
+    },
+    "require-dev": {
+        "jangregor/phpstan-prophecy": "^1.0.0",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpstan/extension-installer": "^1.1.0",
+        "phpstan/phpstan": "^1.4",
+        "phpunit/phpunit": "^9.5.13",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "config": {
+        "process-timeout": 0,
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "start": "php -S localhost:8080 -t public",
+        "test": "phpunit"
     }
 }
