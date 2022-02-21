@@ -1,0 +1,15 @@
+{
+    "name": "vizapata/auth-server",
+    "description": "Basic implementation of an OAuth server using league/oauth2-server",
+    "keywords": [
+        "OAuth2",
+        "Authentication",
+        "Authorization",
+        "psr7"
+    ],
+    "homepage": "http://github.com/vizapata/auth-server",
+    "license": "MIT",
+    "require": {
+        "league/oauth2-server": "^8.3"
+    }
+}
