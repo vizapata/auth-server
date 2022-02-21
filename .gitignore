@@ -36,3 +36,6 @@ composer.phar
 /logs/*
 !/logs/README.md
 .phpunit.result.cache
+
+config.*.ini
+!config.sample.ini
